@@ -27,20 +27,20 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Post Title</label>
-              <input name="title" type="text" class="form-control" placeholder="<%= photo.title %>" id="name" required data-validation-required-message="Please enter your name.">
+              <input name="title" type="text" class="form-control" value="<%= photo.title %>" id="name" required data-validation-required-message="Please enter your name.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Post Detail</label>
-              <textarea name="description" rows="5" class="form-control" placeholder="<%= photo.description %>" id="message" required data-validation-required-message="Please enter a message."></textarea>
+              <textarea name="description" rows="5" class="form-control"  id="message" required data-validation-required-message="Please enter a message."><%= photo.description %></textarea>
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <br>
           <div id="success"></div>
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Update</button>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
         </form>
       </div>
     </div>
