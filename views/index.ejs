@@ -35,9 +35,23 @@
           
           <% } %>
         <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
+          
+          <div>
+            <% if (pages > 0) { %>
+              <ul class="nav tm-paging-links">
+                  <% for (i=1; i <=pages; i++) { %>
+                    <% if (i === current) { %>
+                      <a href="/?page=<%= i %>" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true"><%= i %></a>
+                    <% } else if (i < pages) { %>
+                      <a href="/?page=<%= i %>" class="btn btn-primary" role="button" data-bs-toggle="button" aria-pressed="true"><%= i %></a>
+                      <% } else { %>
+                      <a href="/?page=<%= i %>" class="btn btn-primary" role="button" data-bs-toggle="button" aria-pressed="true"><%= i %></a>
+                    <% } %>
+                  <% } %>
+              </ul>
+              <% } %>
+          </div>
+          
       </div>
     </div>
   </div>
